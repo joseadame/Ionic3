@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the SecondPage page.
+ * Generated class for the ThirdPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,26 +10,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-second',
-  templateUrl: 'second.html',
+  selector: 'page-third',
+  templateUrl: 'third.html',
 })
-export class SecondPage {
+export class ThirdPage {
 
-  message: string;
   constructor(private navCtrl: NavController, private navParams: NavParams) {
-    this.message = this.navParams.get('message');
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SecondPage');
+    console.log('ionViewDidLoad ThirdPage');
   }
 
-  navigateBack(): void {
-    this.navCtrl.pop();
-  }
-
-  navigateToThirdPage(): void {
-    this.navCtrl.push('ThirdPage');
+  setRootPageToHome(): void {
+    this.navCtrl.setRoot('HomePage');
   }
 
 }

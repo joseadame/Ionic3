@@ -22,6 +22,10 @@ export class HomePage {
     console.log('ionViewDidLoad HomePage');
   }
 
+  ionViewWillEnter(){
+    console.log('hemos entrado');
+  }
+
   navigateToSecondPage(): void {
     this.navCtrl.push('SecondPage', {"message" : "hello from home page"});
   }
